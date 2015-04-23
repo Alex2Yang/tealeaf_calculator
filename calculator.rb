@@ -1,12 +1,24 @@
+require 'pry'
+
 def say( msg, newline = true )
   newline ? print("=> #{msg}\n=> ") : print("=> #{msg}")
 end
 
-say "What's the first number?"
-num1 = gets.chomp
+num1, num2 = nil
 
-say "What's the second number?"
-num2 = gets.chomp
+loop do
+  say "Enter the number:"
+  num1 = gets.chomp
+  break unless  num1.empty?
+end
+
+loop do
+  say "Enter the number:"
+  num2 = gets.chomp
+  break unless  num2.empty?
+end
+
+#binding.pry
 
 say "Operator:1)add 2)sub 3)multiply 4)divide"
 operator = gets.chomp
