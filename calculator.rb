@@ -15,7 +15,7 @@ end
 loop do
   say "Enter the number:"
   num2 = gets.chomp
-  break unless  num2.empty?
+  break unless  num2.empty? ||  num2 == '0'
 end
 
 #binding.pry
