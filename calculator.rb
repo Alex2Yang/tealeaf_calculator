@@ -1,10 +1,14 @@
-puts "what's the first number?"
+def say( msg, newline = true )
+  newline ? print("=> #{msg}\n=> ") : print("=> #{msg}")
+end
+
+say "What's the first number?"
 num1 = gets.chomp
 
-puts "what's the second number?"
+say "What's the second number?"
 num2 = gets.chomp
 
-puts "operator:1)add 2)sub 3)multiply 4)divide"
+say "Operator:1)add 2)sub 3)multiply 4)divide"
 operator = gets.chomp
 
 result = case operator
@@ -18,4 +22,4 @@ result = case operator
            num1.to_f / num2.to_f
          end
 
-puts "result is #{result}"
+say "Result is #{result}", false
