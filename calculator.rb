@@ -18,15 +18,15 @@ def get_operator
   operator
 end
 
-def calculate(n1, operator, n2)
+def calculate(number_1, operator, number_2)
   if (operator == '4' && n2 == '0')
     puts "#{n1} cann't be  divided by 0"
   else
     result =  case operator
-            when '1' then n1.to_i + n2.to_i
-            when '2' then n1.to_i - n2.to_i
-            when '3' then n1.to_i * n2.to_i
-            when '4' then n1.to_f / n2.to_f
+            when '1' then number_1.to_i + number_2.to_i
+            when '2' then number_1.to_i - number_2.to_i
+            when '3' then number_1.to_i * number_2.to_i
+            when '4' then number_1.to_f / number_2.to_f
             end
     puts "Result is #{result}."
   end
